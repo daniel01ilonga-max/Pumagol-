@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pumagol | Investimento Digital em Kz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a2540;
+            --secondary: #1a73e8;
+            --accent: #ff6b35;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --warning: #ffc107;
+            --info: #17a2b8;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --radius: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fb;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #0d5cb6;
+            transform: translateY(-3px);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+        }
+
+        .btn-accent:hover {
+            background: #e05a2a;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-invest {
+            background: linear-gradient(135deg, #ff6b35, #ff8c52);
+            color: white;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .btn-invest:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+            background: linear-gradient(135deg, #ff8c52, #ff6b35);
+        }
+
+        .btn-payment {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            display: inline-block;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .btn-payment:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            background: linear-gradient(135deg, #20c997, #28a745);
+        }
+
+        .btn-send-manager {
+            background: linear-gradient(135deg, #17a2b8, #20c997);
+            color: white;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(23, 162, 184, 0.3);
+            display: inline-block;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .btn-send-manager:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(23, 162, 184, 0.4);
+            background: linear-gradient(135deg, #20c997, #17a2b8);
+        }
+
+        .btn-withdraw {
+            background: linear-gradient(135deg, #6f42c1, #e83e8c);
+            color: white;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+            display: inline-block;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .btn-withdraw:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(111, 66, 193, 0.4);
+            background: linear-gradient(135deg, #e83e8c, #6f42c1);
+        }
+
+        .btn-invite {
+            background: linear-gradient(135deg, #6f42c1, #20c997);
+            color: white;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+            display: inline-block;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .btn-invite:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(111, 66, 193, 0.4);
+            background: linear-gradient(135deg, #20c997, #6f42c1);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Notification Bar */
+        .notification-bar {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c52 100%);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: slideDown 0.5s forwards, fadeOut 0.5s 4.5s forwards;
+        }
+
+        @keyframes slideDown {
+            from {transform: translateY(-100%);}
+            to {transform: translateY(0);}
+        }
+
+        @keyframes fadeOut {
+            from {opacity: 1;}
+            to {opacity: 0;}
+        }
+
+        .notification-bar a {
+            color: white;
+            font-weight: 600;
+            text-decoration: underline;
+            margin: 0 5px;
+        }
+
+        .notification-bar a:hover {
+            color: #f0f0f0;
+        }
+
+        .close-notification {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, #0a2540 0%, #1a73e8 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.05)" points="0,100 100,0 100,100"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-item .label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Features */
+        .features {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(26, 115, 232, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Investment Plans */
+        .plans {
+            background: #f0f4f9;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan-card.popular::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .plan-header {
+            margin-bottom: 30px;
+        }
+
+        .plan-name {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .plan-period {
+            color: #777;
+            font-size: 1.1rem;
+        }
+
+        .plan-return {
+            background: rgba(255, 107, 53, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .plan-return .label {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .plan-return .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 5px;
+        }
+
+        .plan-daily {
+            background: rgba(40, 167, 69, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .plan-daily .label {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .plan-daily .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--success);
+            margin-top: 5px;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-features li i {
+            color: var(--success);
+            margin-right: 10px;
+        }
+
+        /* Profile Section */
+        .profile {
+            background: #f0f4f9;
+            padding: 100px 0;
+            display: none;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .profile-sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-main {
+            flex: 3;
+            min-width: 300px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .user-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .user-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .user-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .user-email {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-bottom: 10px;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 12px 15px;
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(26, 115, 232, 0.1);
+            color: var(--secondary);
+        }
+
+        .nav-links a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .balance-card {
+            background: linear-gradient(135deg, #0a2540 0%, #1a73e8 100%);
+            color: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .balance-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .balance-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .bonus-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .bonus-info .label {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .bonus-info .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .balance-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .balance-actions .btn {
+            flex: 1;
+            padding: 12px;
+            font-size: 0.9rem;
+        }
+
+        .transactions {
+            margin-top: 30px;
+        }
+
+        .transaction-list {
+            list-style: none;
+        }
+
+        .transaction-list.empty {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+        }
+
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .transaction-item:last-child {
+            border-bottom: none;
+        }
+
+        .transaction-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .transaction-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(26, 115, 232, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--secondary);
+        }
+
+        .transaction-details h4 {
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .transaction-details p {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .transaction-amount {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .transaction-amount.deposit {
+            color: var(--success);
+        }
+
+        .transaction-amount.withdrawal {
+            color: var(--accent);
+        }
+
+        .transaction-amount.bonus {
+            color: var(--warning);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* Payment Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--radius);
+            width: 90%;
+            max-width: 700px;
+            padding: 30px;
+            position: relative;
+            animation: modalOpen 0.4s forwards;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes modalOpen {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .payment-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .payment-header h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        .payment-details {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .payment-details h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .bank-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .bank-card {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .bank-card h5 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bank-card h5 i {
+            color: var(--accent);
+        }
+
+        .bank-details {
+            list-style: none;
+        }
+
+        .bank-details li {
+            padding: 5px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bank-details li span:first-child {
+            font-weight: 500;
+        }
+
+        .bank-details li span:last-child {
+            font-weight: 600;
+            color: var(--primary);
+            word-break: break-all;
+        }
+
+        .upload-section {
+            margin-top: 25px;
+        }
+
+        .upload-area {
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 20px;
+        }
+
+        .upload-area:hover {
+            border-color: var(--accent);
+            background: rgba(255, 107, 53, 0.05);
+        }
+
+        .upload-area i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .upload-area p {
+            margin: 10px 0;
+        }
+
+        .upload-area input {
+            display: none;
+        }
+
+        .file-info {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .confirmation {
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(40, 167, 69, 0.1);
+            border-radius: 8px;
+            display: none;
+        }
+
+        .confirmation i {
+            font-size: 3rem;
+            color: var(--success);
+            margin-bottom: 15px;
+        }
+
+        .confirmation h4 {
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+
+        .payment-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .payment-option {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .payment-option:hover {
+            border-color: var(--accent);
+        }
+
+        .payment-option.active {
+            border-color: var(--accent);
+            background: rgba(255, 107, 53, 0.1);
+        }
+
+        .payment-option i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .payment-option h5 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Withdrawal Form */
+        .withdrawal-form {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .withdrawal-form h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .withdrawal-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .withdrawal-option {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .withdrawal-option:hover {
+            border-color: var(--accent);
+        }
+
+        .withdrawal-option.active {
+            border-color: var(--accent);
+            background: rgba(255, 107, 53, 0.1);
+        }
+
+        .withdrawal-option i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .withdrawal-option h5 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Registration Section */
+        .registration {
+            background: linear-gradient(135deg, #0a2540 0%, #1a73e8 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 60px 0;
+        }
+
+        .registration::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.03)" points="0,100 100,0 100,100"/></svg>');
+            background-size: cover;
+        }
+
+        .registration-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .registration-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .registration-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .registration-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .registration-form {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius);
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .form-footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #f0f4f9;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-content::before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            opacity: 0.1;
+            color: var(--accent);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c52 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 70px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Invite Section */
+        .invite-section {
+            background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .invite-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .invite-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .commission-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            padding: 25px;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        .commission-info h3 {
+            margin-bottom: 15px;
+        }
+
+        .commission-info ul {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+
+        .commission-info li {
+            margin-bottom: 10px;
+        }
+
+        .referral-link {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .referral-link input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .referral-link button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .referral-link button:hover {
+            background: #e05a2a;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .registration-content {
+                flex-direction: column;
+            }
+            
+            .bank-info {
+                flex-direction: column;
+            }
+            
+            .payment-options, .withdrawal-options {
+                flex-direction: column;
+            }
+            
+            .profile-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                padding: 20px 0;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .auth-buttons {
+                display: none;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .balance-actions {
+                flex-direction: column;
+            }
+            
+            .referral-link {
+                flex-direction: column;
+            }
+            
+            .referral-link input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero {
+                padding: 130px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Notification Bar -->
+    <div class="notification-bar" id="notification-bar">
+        <i class="fas fa-bell"></i> Entre no nosso grupo oficial no Telegram para atualizações e suporte!
+        <a href="https://t.me/+vYAL8g5MHoNmYzlk" target="_blank">Clique aqui para entrar</a>
+        <span class="close-notification" id="close-notification">&times;</span>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://i.postimg.cc/mzGKCBz0/logo.png" alt="Pumagol Logo">
+                <h1>Pumagol<span>Invest</span></h1>
+            </div>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#plans">Planos</a></li>
+                    <li><a href="#registration">Cadastro</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="login-btn">Entrar</button>
+                <button class="btn" id="register-btn">Cadastre-se</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Invista em Kwanza com Retornos Garantidos</h1>
+                <p>Plataforma segura e transparente para investir em Kz com retornos mensais atrativos. Comece hoje mesmo e multiplique seu dinheiro.</p>
+                <div class="hero-btns">
+                    <a href="#plans" class="btn">Começar Agora</a>
+                    <a href="#registration" class="btn btn-outline">Criar Conta</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="number">100%</div>
+                        <div class="label">Retorno Garantido</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">24/7</div>
+                        <div class="label">Suporte</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">1500Kz</div>
+                        <div class="label">Investimento Mínimo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Por que Escolher Nós?</h2>
+                <p>Oferecemos as melhores condições para investir em Kwanza com segurança e transparência</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança Máxima</h3>
+                    <p>Proteção de última geração para seus investimentos com criptografia avançada.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Retorno Garantido</h3>
+                    <p>100% de retorno garantido em todos os planos de investimento.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Programa de Convites</h3>
+                    <p>Ganhe 10% por cada depósito de seus convidados.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Suporte 24/7</h3>
+                    <p>Nossa equipe está sempre pronta para ajudar com qualquer dúvida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Plans -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <div class="section-title">
+                <h2>Planos de Investimento</h2>
+                <p>Escolha o plano que melhor se adapta ao seu perfil de investidor</p>
+            </div>
+            <div class="plans-grid">
+                <!-- Plano 1 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Iniciante</h3>
+                        <div class="plan-price">1.500 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">1.500 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">150.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques mensais</li>
+                        <li><i class="fas fa-check"></i> Suporte por email</li>
+                        <li><i class="fas fa-times"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Iniciante" data-invest="1.500 Kz" data-return="150.000 Kz" data-daily="1.500 Kz">Investir Agora</button>
+                </div>
+                
+                <!-- Plano 2 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Básico</h3>
+                        <div class="plan-price">5.000 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">1.100 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">55.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques mensais</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                        <li><i class="fas fa-check"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Básico" data-invest="5.000 Kz" data-return="55.000 Kz" data-daily="1.100 Kz">Investir Agora</button>
+                </div>
+                
+                <!-- Plano 3 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Padrão</h3>
+                        <div class="plan-price">10.000 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">2.500 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">125.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques ilimitados</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                        <li><i class="fas fa-check"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Padrão" data-invest="10.000 Kz" data-return="125.000 Kz" data-daily="2.500 Kz">Investir Agora</button>
+                </div>
+                
+                <!-- Plano 4 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Avançado</h3>
+                        <div class="plan-price">20.000 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">4.100 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">205.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques ilimitados</li>
+                        <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Avançado" data-invest="20.000 Kz" data-return="205.000 Kz" data-daily="4.100 Kz">Investir Agora</button>
+                </div>
+                
+                <!-- Plano 5 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Premium</h3>
+                        <div class="plan-price">40.000 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">7.500 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">375.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques ilimitados</li>
+                        <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Premium" data-invest="40.000 Kz" data-return="375.000 Kz" data-daily="7.500 Kz">Investir Agora</button>
+                </div>
+                
+                <!-- Plano 6 -->
+                <div class="plan-card popular">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Elite</h3>
+                        <div class="plan-price">100.000 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">9.000 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">900.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques ilimitados</li>
+                        <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Elite" data-invest="100.000 Kz" data-return="900.000 Kz" data-daily="9.000 Kz">Investir Agora</button>
+                </div>
+                
+                <!-- Plano 7 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Profissional</h3>
+                        <div class="plan-price">200.000 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">19.000 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">1.900.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques ilimitados</li>
+                        <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Profissional" data-invest="200.000 Kz" data-return="1.900.000 Kz" data-daily="19.000 Kz">Investir Agora</button>
+                </div>
+                
+                <!-- Plano 8 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Empresarial</h3>
+                        <div class="plan-price">700.000 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">30.000 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">3.000.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques ilimitados</li>
+                        <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Empresarial" data-invest="700.000 Kz" data-return="3.000.000 Kz" data-daily="30.000 Kz">Investir Agora</button>
+                </div>
+                
+                <!-- Plano 9 -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Master</h3>
+                        <div class="plan-price">1.000.000 Kz</div>
+                        <div class="plan-period">Investimento Mínimo</div>
+                    </div>
+                    <div class="plan-daily">
+                        <div class="label">Renda Diária</div>
+                        <div class="value">100.000 Kz</div>
+                    </div>
+                    <div class="plan-return">
+                        <div class="label">Retorno Garantido</div>
+                        <div class="value">10.000.000 Kz</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Retorno 100%</li>
+                        <li><i class="fas fa-check"></i> Saques ilimitados</li>
+                        <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Bônus de referência</li>
+                    </ul>
+                    <button class="btn-invest" data-plan="Master" data-invest="1.000.000 Kz" data-return="10.000.000 Kz" data-daily="100.000 Kz">Investir Agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invite Section -->
+    <section class="invite-section" id="invite">
+        <div class="container">
+            <h2>Programa de Convites</h2>
+            <p>Ganhe 10% de comissão por cada depósito realizado por seus convidados!</p>
+            
+            <div class="commission-info">
+                <h3>Como Funciona?</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Compartilhe seu link de convite exclusivo</li>
+                    <li><i class="fas fa-check-circle"></i> Seu convidado se cadastra usando seu link</li>
+                    <li><i class="fas fa-check-circle"></i> Quando ele fizer um depósito, você ganha 10%</li>
+                    <li><i class="fas fa-check-circle"></i> Comissão creditada automaticamente na sua conta</li>
+                </ul>
+            </div>
+            
+            <div class="referral-link">
+                <input type="text" id="referral-url" value="https://pumagol.com/invite?ref=usuario123" readonly>
+                <button id="copy-referral">Copiar Link</button>
+            </div>
+            
+            <button class="btn-invite" id="share-referral">
+                <i class="fas fa-share-alt"></i> Compartilhar Convite
+            </button>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration" id="registration">
+        <div class="container">
+            <div class="registration-content">
+                <div class="registration-text">
+                    <h2>Comece a Investir Hoje</h2>
+                    <p>Junte-se a milhares de investidores que já estão lucrando com o Pumagol. Crie sua conta em minutos e comece a ganhar dinheiro com nossos planos de investimento.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Cadastro gratuito e rápido</li>
+                        <li><i class="fas fa-check-circle"></i> Investimento a partir de 1.500 Kz</li>
+                        <li><i class="fas fa-check-circle"></i> Retorno garantido de 100%</li>
+                        <li><i class="fas fa-check-circle"></i> Programa de convites com 10% de comissão</li>
+                    </ul>
+                </div>
+                <div class="registration-form">
+                    <div class="form-tabs">
+                        <div class="tab active" data-tab="register">Cadastro</div>
+                        <div class="tab" data-tab="login">Login</div>
+                    </div>
+                    <div class="tab-content active" id="register-tab">
+                        <form id="register-form">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Digite seu email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" placeholder="Digite seu telefone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Senha</label>
+                                <input type="password" id="password" placeholder="Crie uma senha" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirmar Senha</label>
+                                <input type="password" id="confirm-password" placeholder="Confirme sua senha" required>
+                            </div>
+                            <button type="submit" class="btn btn-accent" style="width:100%">Criar Conta</button>
+                        </form>
+                        <div class="form-footer">
+                            <p>Já tem uma conta? <a href="#" id="login-link">Faça login</a></p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="login-tab">
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" placeholder="Digite seu email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Senha</label>
+                                <input type="password" id="login-password" placeholder="Digite sua senha" required>
+                            </div>
+                            <button type="submit" class="btn btn-accent" style="width:100%">Entrar</button>
+                        </form>
+                        <div class="form-footer">
+                            <p>Não tem uma conta? <a href="#" id="register-link">Cadastre-se</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Depoimentos de Investidores</h2>
+                <p>O que nossos clientes dizem sobre nossa plataforma</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        Comecei com o plano de 5.000 Kz e já recebi 55.000 Kz em retornos. A plataforma é simples e os retornos são consistentes.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <h4>Maria João</h4>
+                            <p>Investidora desde 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        A melhor plataforma de investimento em Kwanza que já usei. Com o plano de 20.000 Kz, recebi 205.000 Kz em apenas um mês!
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CM</div>
+                        <div class="author-info">
+                            <h4>Carlos Mendes</h4>
+                            <p>Investidor Avançado</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        Com o plano Elite de 100.000 Kz, consegui 900.000 Kz em apenas 30 dias. Recomendo totalmente!
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AF</div>
+                        <div class="author-info">
+                            <h4>Ana Ferreira</h4>
+                            <p>Investidora Elite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto para Começar?</h2>
+            <p>Junte-se a milhares de investidores que já estão lucrando com o Pumagol</p>
+            <a href="#registration" class="btn btn-accent">Criar Conta Gratuitamente</a>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile" id="profile">
+        <div class="container profile-container">
+            <div class="profile-sidebar">
+                <div class="user-info">
+                    <div class="user-avatar" id="user-initials">MJ</div>
+                    <div class="user-name" id="user-name">Maria João</div>
+                    <div class="user-email" id="user-email">maria.joao@email.com</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active" id="dashboard-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#" id="deposit-link"><i class="fas fa-arrow-down"></i> Depositar</a></li>
+                    <li><a href="#" id="withdraw-link"><i class="fas fa-arrow-up"></i> Retirar</a></li>
+                    <li><a href="#" id="invite-link"><i class="fas fa-user-friends"></i> Convidar Amigos</a></li>
+                    <li><a href="#" id="history-link"><i class="fas fa-history"></i> Histórico</a></li>
+                    <li><a href="#" id="settings-link"><i class="fas fa-cog"></i> Configurações</a></li>
+                    <li><a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </div>
+            <div class="profile-main">
+                <div class="balance-card">
+                    <div class="balance-title">Saldo Disponível</div>
+                    <div class="balance-amount" id="balance-amount">150.000 Kz</div>
+                    <div class="bonus-info">
+                        <div class="label">Bônus de Boas-Vindas</div>
+                        <div class="value" id="bonus-amount">500 Kz</div>
+                    </div>
+                    <div class="balance-actions">
+                        <button class="btn btn-outline" id="deposit-btn">Depositar</button>
+                        <button class="btn btn-outline" id="withdraw-btn">Retirar</button>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <h3>Últimas Transações</h3>
+                    <div class="transactions">
+                        <ul class="transaction-list empty" id="transaction-list">
+                            <li class="transaction-item">
+                                <div class="transaction-info">
+                                    <div class="transaction-icon">
+                                        <i class="fas fa-gift"></i>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <h4>Bônus de Boas-Vindas</h4>
+                                        <p>Data de registro</p>
+                                    </div>
+                                </div>
+                                <div class="transaction-amount bonus">+ 500 Kz</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="profile-card" id="withdrawal-section" style="display: none;">
+                    <h3>Solicitar Retirada</h3>
+                    <div class="withdrawal-options">
+                        <div class="withdrawal-option active" id="bank-option">
+                            <i class="fas fa-university"></i>
+                            <h5>Transferência Bancária</h5>
+                            <p>Para contas BAI, BFA ou Atlântico</p>
+                        </div>
+                        <div class="withdrawal-option" id="express-option">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h5>Transferência Express</h5>
+                            <p>Para número Multicaixa Express</p>
+                        </div>
+                    </div>
+                    
+                    <div id="bank-withdrawal-form">
+                        <form id="bank-withdrawal-form">
+                            <div class="form-group">
+                                <label for="withdrawal-amount">Valor a Retirar (Kz)</label>
+                                <input type="number" id="withdrawal-amount" placeholder="Digite o valor" min="1000">
+                            </div>
+                            <div class="form-group">
+                                <label for="bank-select">Banco</label>
+                                <select id="bank-select">
+                                    <option value="">Selecione o banco</option>
+                                    <option value="BAI">Banco BAI</option>
+                                    <option value="BFA">Banco BFA</option>
+                                    <option value="Atlantico">Banco Atlântico</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="iban">IBAN</label>
+                                <input type="text" id="iban" placeholder="Digite o IBAN da conta">
+                            </div>
+                            <button type="submit" class="btn-withdraw">Solicitar Retirada</button>
+                        </form>
+                    </div>
+                    
+                    <div id="express-withdrawal-form" style="display: none;">
+                        <form id="express-withdrawal-form">
+                            <div class="form-group">
+                                <label for="express-amount">Valor a Retirar (Kz)</label>
+                                <input type="number" id="express-amount" placeholder="Digite o valor" min="1000">
+                            </div>
+                            <div class="form-group">
+                                <label for="express-number">Número Multicaixa Express</label>
+                                <input type="tel" id="express-number" placeholder="Digite o número">
+                            </div>
+                            <button type="submit" class="btn-withdraw">Solicitar Retirada</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="profile-card" id="invite-section" style="display: none;">
+                    <h3>Convide Amigos e Ganhe</h3>
+                    <p>Ganhe 10% de comissão por cada depósito realizado por seus convidados!</p>
+                    
+                    <div class="commission-info">
+                        <h3>Como Funciona?</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Compartilhe seu link de convite exclusivo</li>
+                            <li><i class="fas fa-check-circle"></i> Seu convidado se cadastra usando seu link</li>
+                            <li><i class="fas fa-check-circle"></i> Quando ele fizer um depósito, você ganha 10%</li>
+                            <li><i class="fas fa-check-circle"></i> Comissão creditada automaticamente na sua conta</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="referral-link">
+                        <input type="text" id="profile-referral-url" value="https://pumagol.com/invite?ref=usuario123" readonly>
+                        <button id="copy-profile-referral">Copiar Link</button>
+                    </div>
+                    
+                    <button class="btn-invite" id="share-profile-referral">
+                        <i class="fas fa-share-alt"></i> Compartilhar Convite
+                    </button>
+                    
+                    <div class="profile-card" style="margin-top: 30px;">
+                        <h3>Seus Convites</h3>
+                        <p>Você já convidou <strong>5 pessoas</strong>, e <strong>3</strong> já fizeram depósitos.</p>
+                        <p>Comissão total ganha: <strong>15.000 Kz</strong></p>
+                        
+                        <div class="transactions">
+                            <ul class="transaction-list">
+                                <li class="transaction-item">
+                                    <div class="transaction-info">
+                                        <div class="transaction-icon">
+                                            <i class="fas fa-gift"></i>
+                                        </div>
+                                        <div class="transaction-details">
+                                            <h4>Comissão de Convite</h4>
+                                            <p>12/05/2025 - Convite de João Silva</p>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount deposit">+ 5.000 Kz</div>
+                                </li>
+                                <li class="transaction-item">
+                                    <div class="transaction-info">
+                                        <div class="transaction-icon">
+                                            <i class="fas fa-gift"></i>
+                                        </div>
+                                        <div class="transaction-details">
+                                            <h4>Comissão de Convite</h4>
+                                            <p>10/05/2025 - Convite de Maria Santos</p>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount deposit">+ 10.000 Kz</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="payment-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-payment-modal">&times;</span>
+            <div class="payment-header">
+                <h3>Pagamento do Investimento</h3>
+                <p id="payment-plan-info">Plano selecionado: <span id="selected-plan"></span></p>
+            </div>
+            
+            <div class="payment-details">
+                <h4>Dados Bancários para Depósito</h4>
+                <div class="bank-info">
+                    <div class="bank-card">
+                        <h5><i class="fas fa-university"></i> Banco BAI</h5>
+                        <ul class="bank-details">
+                            <li><span>IBAN:</span> <span>06004000004981561810170</span></li>
+                            <li><span>Titular:</span> <span>Pumagol Invest</span></li>
+                        </ul>
+                    </div>
+                    <div class="bank-card">
+                        <h5><i class="fas fa-mobile-alt"></i> Multicaixa Express</h5>
+                        <ul class="bank-details">
+                            <li><span>Número:</span> <span>974083486</span></li>
+                            <li><span>Tipo:</span> <span>Transferência Express</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 15px; font-weight: 500;">
+                    Valor a depositar: <span id="payment-amount" style="color: var(--accent); font-size: 1.2rem;"></span>
+                </p>
+            </div>
+            
+            <div class="payment-options">
+                <div class="payment-option active" id="upload-option">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h5>Enviar Comprovativo</h5>
+                    <p>Envie seu comprovativo para validação automática</p>
+                </div>
+                <div class="payment-option" id="manager-option">
+                    <i class="fas fa-user-tie"></i>
+                    <h5>Enviar ao Gerente</h5>
+                    <p>Envie diretamente para o gerente para validação</p>
+                </div>
+            </div>
+            
+            <div class="upload-section" id="upload-section">
+                <h4 style="text-align: center; margin-bottom: 15px;">Enviar Comprovativo de Pagamento</h4>
+                <div class="upload-area" id="upload-area">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Clique ou arraste o comprovativo aqui</p>
+                    <p>(Formatos aceitos: JPG, PNG, PDF)</p>
+                    <input type="file" id="receipt-file" accept=".jpg,.jpeg,.png,.pdf">
+                </div>
+                <div class="file-info" id="file-info">Nenhum arquivo selecionado</div>
+                <button class="btn-payment" id="confirm-payment">Confirmar Pagamento</button>
+            </div>
+            
+            <div class="upload-section" id="manager-section" style="display: none;">
+                <h4 style="text-align: center; margin-bottom: 15px;">Enviar ao Gerente</h4>
+                <p style="text-align: center; margin-bottom: 20px;">Após realizar o depósito, clique no botão abaixo para enviar o comprovativo diretamente ao gerente para validação.</p>
+                <p style="text-align: center; margin-bottom: 20px; font-weight: 500;">
+                    Link do perfil do gerente: <a href="https://t.me/Fernandapredo" target="_blank">@Fernandapredo</a>
+                </p>
+                <button class="btn-send-manager" id="send-to-manager">
+                    <i class="fas fa-paper-plane"></i> Enviar ao Gerente
+                </button>
+            </div>
+            
+            <div class="confirmation" id="confirmation-message">
+                <i class="fas fa-check-circle"></i>
+                <h4>Pagamento Confirmado!</h4>
+                <p>Seu investimento foi registrado com sucesso. Em breve você receberá um email com os detalhes.</p>
+                <button class="btn" style="margin-top: 20px;" id="close-confirmation">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PumagolInvest</h3>
+                    <p>A plataforma mais confiável para investir em Kwanza com retornos garantidos e segurança de primeira.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#features">Recursos</a></li>
+                        <li><a href="#plans">Planos</a></li>
+                        <li><a href="#registration">Cadastro</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Recursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Suporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Luanda, Angola</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+244 923 456 789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@pumagol.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2025 Pumagol Invest. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.querySelector('i').classList.toggle('fa-bars');
+            mobileToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+                mobileToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Notification bar
+        const notificationBar = document.getElementById('notification-bar');
+        const closeNotification = document.getElementById('close-notification');
+        
+        // Show notification bar
+        setTimeout(() => {
+            notificationBar.style.display = 'block';
+            notificationBar.style.animation = 'slideDown 0.5s forwards';
+        }, 1000);
+        
+        // Close notification
+        closeNotification.addEventListener('click', () => {
+            notificationBar.style.animation = 'fadeOut 0.5s forwards';
+            setTimeout(() => {
+                notificationBar.style.display = 'none';
+            }, 500);
+        });
+        
+        // Auto close notification after 10 seconds
+        setTimeout(() => {
+            if (notificationBar.style.display !== 'none') {
+                notificationBar.style.animation = 'fadeOut 0.5s forwards';
+                setTimeout(() => {
+                    notificationBar.style.display = 'none';
+                }, 500);
+            }
+        }, 10000);
+        
+        // Invest button functionality
+        const investButtons = document.querySelectorAll('.btn-invest');
+        const paymentModal = document.getElementById('payment-modal');
+        const closeModal = document.getElementById('close-payment-modal');
+        const selectedPlan = document.getElementById('selected-plan');
+        const paymentAmount = document.getElementById('payment-amount');
+        const confirmPayment = document.getElementById('confirm-payment');
+        const sendToManager = document.getElementById('send-to-manager');
+        const confirmationMessage = document.getElementById('confirmation-message');
+        const closeConfirmation = document.getElementById('close-confirmation');
+        const uploadArea = document.getElementById('upload-area');
+        const receiptFile = document.getElementById('receipt-file');
+        const fileInfo = document.getElementById('file-info');
+        const uploadSection = document.getElementById('upload-section');
+        const managerSection = document.getElementById('manager-section');
+        const uploadOption = document.getElementById('upload-option');
+        const managerOption = document.getElementById('manager-option');
+        
+        let currentPlan = '';
+        let currentInvestment = '';
+        
+        investButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                currentPlan = this.getAttribute('data-plan');
+                currentInvestment = this.getAttribute('data-invest');
+                
+                selectedPlan.textContent = `${currentPlan} - ${currentInvestment}`;
+                paymentAmount.textContent = currentInvestment;
+                
+                paymentModal.style.display = 'flex';
+                confirmationMessage.style.display = 'none';
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            paymentModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === paymentModal) {
+                paymentModal.style.display = 'none';
+            }
+        });
+        
+        // Payment options
+        uploadOption.addEventListener('click', () => {
+            uploadOption.classList.add('active');
+            managerOption.classList.remove('active');
+            uploadSection.style.display = 'block';
+            managerSection.style.display = 'none';
+        });
+        
+        managerOption.addEventListener('click', () => {
+            managerOption.classList.add('active');
+            uploadOption.classList.remove('active');
+            managerSection.style.display = 'block';
+            uploadSection.style.display = 'none';
+        });
+        
+        // Upload area click
+        uploadArea.addEventListener('click', () => {
+            receiptFile.click();
+        });
+        
+        // File selection
+        receiptFile.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                fileInfo.textContent = `Arquivo selecionado: ${this.files[0].name}`;
+            } else {
+                fileInfo.textContent = 'Nenhum arquivo selecionado';
+            }
+        });
+        
+        // Confirm payment
+        confirmPayment.addEventListener('click', () => {
+            if (receiptFile.files.length === 0) {
+                alert('Por favor, envie o comprovativo de pagamento.');
+                return;
+            }
+            
+            // Show confirmation message
+            confirmationMessage.style.display = 'block';
+        });
+        
+        // Send to manager
+        sendToManager.addEventListener('click', () => {
+            // Open Telegram link
+            window.open('https://t.me/Fernandapredo', '_blank');
+            
+            // Show confirmation message
+            confirmationMessage.style.display = 'block';
+        });
+        
+        // Close confirmation
+        closeConfirmation.addEventListener('click', () => {
+            paymentModal.style.display = 'none';
+        });
+        
+        // Form tabs
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+        
+        // Form submission
+        document.getElementById('register-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Update profile with user data
+            document.getElementById('user-name').textContent = name;
+            document.getElementById('user-email').textContent = email;
+            document.getElementById('user-initials').textContent = name.split(' ').map(n => n[0]).join('').toUpperCase();
+            
+            alert(`Conta criada com sucesso, ${name}! Bem-vindo ao Pumagol.`);
+            
+            // Hide registration section and show profile
+            document.getElementById('registration').style.display = 'none';
+            document.querySelector('.profile').style.display = 'block';
+            
+            this.reset();
+        });
+        
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            
+            // Update profile with user data
+            document.getElementById('user-name').textContent = 'Usuário Logado';
+            document.getElementById('user-email').textContent = email;
+            document.getElementById('user-initials').textContent = email.charAt(0).toUpperCase();
+            
+            alert(`Bem-vindo de volta! Login realizado com sucesso para ${email}.`);
+            
+            // Hide registration section and show profile
+            document.getElementById('registration').style.display = 'none';
+            document.querySelector('.profile').style.display = 'block';
+            
+            this.reset();
+        });
+        
+        // Login/Register links in forms
+        document.getElementById('login-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.tab[data-tab="login"]').click();
+        });
+        
+        document.getElementById('register-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.tab[data-tab="register"]').click();
+        });
+        
+        // Auth buttons in header
+        document.getElementById('login-btn').addEventListener('click', function() {
+            document.querySelector('.tab[data-tab="login"]').click();
+            document.querySelector('#registration').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        
+        document.getElementById('register-btn').addEventListener('click', function() {
+            document.querySelector('.tab[data-tab="register"]').click();
+            document.querySelector('#registration').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        
+        // Profile navigation
+        document.getElementById('dashboard-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('withdrawal-section').style.display = 'none';
+            document.getElementById('invite-section').style.display = 'none';
+        });
+        
+        document.getElementById('deposit-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('withdrawal-section').style.display = 'none';
+            document.getElementById('invite-section').style.display = 'none';
+            
+            // Open deposit modal
+            document.querySelector('.btn-invest').click();
+        });
+        
+        document.getElementById('withdraw-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('withdrawal-section').style.display = 'block';
+            document.getElementById('invite-section').style.display = 'none';
+        });
+        
+        document.getElementById('invite-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('withdrawal-section').style.display = 'none';
+            document.getElementById('invite-section').style.display = 'block';
+        });
+        
+        document.getElementById('history-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('withdrawal-section').style.display = 'none';
+            document.getElementById('invite-section').style.display = 'none';
+        });
+        
+        document.getElementById('settings-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('withdrawal-section').style.display = 'none';
+            document.getElementById('invite-section').style.display = 'none';
+        });
+        
+        document.getElementById('logout-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            if (confirm('Tem certeza que deseja sair?')) {
+                document.querySelector('.profile').style.display = 'none';
+                document.getElementById('registration').style.display = 'block';
+                document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                document.getElementById('dashboard-link').classList.add('active');
+                document.getElementById('withdrawal-section').style.display = 'none';
+                document.getElementById('invite-section').style.display = 'none';
+            }
+        });
+        
+        // Balance buttons
+        document.getElementById('deposit-btn').addEventListener('click', function() {
+            document.querySelector('.btn-invest').click();
+        });
+        
+        document.getElementById('withdraw-btn').addEventListener('click', function() {
+            document.getElementById('withdraw-link').click();
+        });
+        
+        // Withdrawal options
+        const bankOption = document.getElementById('bank-option');
+        const expressOption = document.getElementById('express-option');
+        const bankWithdrawalForm = document.getElementById('bank-withdrawal-form');
+        const expressWithdrawalForm = document.getElementById('express-withdrawal-form');
+        
+        bankOption.addEventListener('click', function() {
+            bankOption.classList.add('active');
+            expressOption.classList.remove('active');
+            bankWithdrawalForm.style.display = 'block';
+            expressWithdrawalForm.style.display = 'none';
+        });
+        
+        expressOption.addEventListener('click', function() {
+            expressOption.classList.add('active');
+            bankOption.classList.remove('active');
+            expressWithdrawalForm.style.display = 'block';
+            bankWithdrawalForm.style.display = 'none';
+        });
+        
+        // Withdrawal forms
+        document.getElementById('bank-withdrawal-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const amount = document.getElementById('withdrawal-amount').value;
+            const bank = document.getElementById('bank-select').value;
+            const iban = document.getElementById('iban').value;
+            
+            if (!amount || !bank || !iban) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+            
+            alert(`Solicitação de retirada de ${amount} Kz para conta ${iban} no banco ${bank} enviada com sucesso!`);
+            this.reset();
+        });
+        
+        document.getElementById('express-withdrawal-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const amount = document.getElementById('express-amount').value;
+            const number = document.getElementById('express-number').value;
+            
+            if (!amount || !number) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+            
+            alert(`Solicitação de retirada de ${amount} Kz para o número ${number} via Transferência Express enviada com sucesso!`);
+            this.reset();
+        });
+        
+        // Referral link functionality
+        document.getElementById('copy-referral').addEventListener('click', function() {
+            const referralUrl = document.getElementById('referral-url');
+            referralUrl.select();
+            document.execCommand('copy');
+            alert('Link de convite copiado para a área de transferência!');
+        });
+        
+        document.getElementById('share-referral').addEventListener('click', function() {
+            const referralUrl = document.getElementById('referral-url').value;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Convite Pumagol',
+                    text: 'Ganhe dinheiro investindo em Kwanza com retornos garantidos!',
+                    url: referralUrl
+                }).catch(console.error);
+            } else {
+                alert('Seu navegador não suporta compartilhamento. Copie o link manualmente.');
+            }
+        });
+        
+        document.getElementById('copy-profile-referral').addEventListener('click', function() {
+            const referralUrl = document.getElementById('profile-referral-url');
+            referralUrl.select();
+            document.execCommand('copy');
+            alert('Link de convite copiado para a área de transferência!');
+        });
+        
+        document.getElementById('share-profile-referral').addEventListener('click', function() {
+            const referralUrl = document.getElementById('profile-referral-url').value;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Convite Pumagol',
+                    text: 'Ganhe dinheiro investindo em Kwanza com retornos garantidos!',
+                    url: referralUrl
+                }).catch(console.error);
+            } else {
+                alert('Seu navegador não suporta compartilhamento. Copie o link manualmente.');
+            }
+        });
+        
+        // Open Telegram group link
+        document.querySelector('.notification-bar a').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://t.me/+vYAL8g5MHoNmYzlk', '_blank');
+        });
+    </script>
+</body>
+</html>
